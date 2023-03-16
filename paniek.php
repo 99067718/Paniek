@@ -50,7 +50,7 @@
     }
     else{
         ?>
-        <div id="Results">
+        <div id="results">
             <?php
             #Variables
             $goal = $_POST["question1"];
@@ -67,7 +67,7 @@
             echo("<p>". "He got superpowers (".$superpower.") as a result of a failed experiment.</p>");
             echo("<p>But his enemy ". $villain." tried to stop that from happening.</p>");
             echo("<p>". $villain." also had a dream, his dream was to ".$villainGoal.".</p>");
-            echo("<p>". $villain." was a strong enemy, he could increase his power by eating superfood(".$goal.").</p>");
+            echo("<p>". $villain." was a strong enemy, he could increase his power by eating superfood(".$superFood.").</p>");
             echo("<p>Will ".$name." be able to save the world and reach his goal before ".$villain." reaches his goal?</p>");
             echo("<p>We will probably not figure out, so don't expect too much of this story</p><br>");
             echo("<h1> the end </h1>")
