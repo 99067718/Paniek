@@ -13,34 +13,34 @@
     if ($_POST == "" || $_POST == null){
         ?>
         <div id="questions">
-        <h1>Onkunde</h1>
+        <h1>The super cool school thingy</h1>
         <form method="post">
         <div>
-            <label>wat zou je graag willen kunnen?</label><br>
+            <label>What skill would you like to have</label><br>
             <input type="text" id="question1" name="question1" value="" placeholder="The more you know" required><br>
         </div>
         <div>
-            <label>Met welk persoon kan je goed opschieten?</label><br>
-            <input type="text" id="question2" name="question2" value="" placeholder="HE'S GOT A GUN!" required><br>
+            <label>Who do you get along with</label><br>
+            <input type="text" id="question2" name="question2" value="" placeholder="HMM, yes who is it?" required><br>
         </div>
         <div>
-            <label>Als je een superkracht zou kunnen hebben voor 24 uur, welke superkracht zou je kiezen?</label><br>
+            <label>If you had superpowers for 24 hours, what superpower would you have?</label><br>
             <input type="text" id="question3" name="question3" value="" placeholder="dududududu Batman" required><br>
         </div>
         <div>
-            <label>Wat is je favoriete eten?</label><br>
+            <label>What is your favorite food?</label><br>
             <input type="text" id="question4" name="question4" value="" placeholder="wow I am popular" required><br>
         </div>
         <div>
-            <label>Wie zou je graag een keer willen ontmoeten?</label><br>
+            <label>Who do you want to meet?</label><br>
             <input type="text" id="question5" name="question5" value="" placeholder="Sushi number 3" required><br>
         </div>
         <div>
-            <label>Wat is je favoriete serie?</label><br>
+            <label>What is your favorite series?</label><br>
             <input type="text" id="question6" name="question6" value="" placeholder="The serie where the when the when" required><br>
         </div>
         <div>
-            <label>Wat wil je graag een keer doen?</label><br>
+            <label>What would you like to do sometime?</label><br>
             <input type="text" id="question7" name="question7" value="" placeholder="yeah, what is it..?" required><br>
         </div>
         <input type="submit" value="Submit" id="submit">
@@ -51,7 +51,27 @@
     else{
         ?>
         <div id="Results">
-            <label>this is the result</label>
+            <?php
+            #Variables
+            $goal = $_POST["question1"];
+            $villain = $_POST["question2"];
+            $superpower = $_POST["question3"];
+            $superFood = $_POST["question4"];
+            $name = $_POST["question5"];
+            $world = $_POST["question6"];
+            $villainGoal = $_POST["question7"];
+            #story
+            echo("<h1>This is the story of " .$name."</h1><br>");
+            echo("<p>". $name." lived in the world of ".$world."</p>");
+            echo("<p>". "He had the dream to ".$goal."</p>");
+            echo("<p>". "He got superpowers (".$superpower.") as a result of a failed experiment.</p>");
+            echo("<p>But his enemy ". $villain." tried to stop that from happening.</p>");
+            echo("<p>". $villain." also had a dream, his dream was to ".$villainGoal.".</p>");
+            echo("<p>". $villain." was a strong enemy, he could increase his power by eating superfood(".$goal.").</p>");
+            echo("<p>Will ".$name." be able to save the world and reach his goal before ".$villain." reaches his goal?</p>");
+            echo("<p>We will probably not figure out, so don't expect too much of this story</p><br>");
+            echo("<h1> the end </h1>")
+            ?>
         </div>
     <?php
     }
