@@ -9,3 +9,14 @@
     padding: 20px;
     border-radius: 30px;
 }
+body{
+    display: flex;
+    flex-direction: row;
+}
+#menu{
+    background-color: gray;
+    height: 100vh;
+}
+#menu img{
+    width: 100px;
+}

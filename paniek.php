@@ -9,6 +9,13 @@
     <script src='main.js'></script>
 </head>
 <body>
+    <div id="menu">
+        <h1>Hello</h1>
+        <div onclick="window.open('https://github.com/99067718')">
+            <img src="https://avatars.githubusercontent.com/u/89968831?v=4">
+            <h1>2023</h1>
+        </div>
+    </div>
     <?php
     if ($_POST == "" || $_POST == null){
         ?>
@@ -61,14 +68,14 @@
             $world = $_POST["question6"];
             $villainGoal = $_POST["question7"];
             #story
-            echo("<h1>This is the story of " .$name."</h1><br>");
-            echo("<p>". $name." lived in the world of ".$world."</p>");
-            echo("<p>". "He had the dream to ".$goal."</p>");
-            echo("<p>". "He got superpowers (".$superpower.") as a result of a failed experiment.</p>");
-            echo("<p>But his enemy ". $villain." tried to stop that from happening.</p>");
-            echo("<p>". $villain." also had a dream, his dream was to ".$villainGoal.".</p>");
-            echo("<p>". $villain." was a strong enemy, he could increase his power by eating superfood(".$superFood.").</p>");
-            echo("<p>Will ".$name." be able to save the world and reach his goal before ".$villain." reaches his goal?</p>");
+            echo("<h1>This is the story of " .htmlspecialchars($name)."</h1><br>");
+            echo("<p>". htmlspecialchars($name)." lived in the world of ".htmlspecialchars($world)."</p>");
+            echo("<p>". "He had the dream to ".htmlspecialchars($goal)."</p>");
+            echo("<p>". "He got superpowers (".htmlspecialchars($superpower).") as a result of a failed experiment.</p>");
+            echo("<p>But his enemy ".htmlspecialchars($villain)." tried to stop that from happening.</p>");
+            echo("<p>".htmlspecialchars($villain)." also had a dream, his dream was to ".htmlspecialchars($villainGoal).".</p>");
+            echo("<p>".htmlspecialchars($villain)." was a strong enemy, he could increase his power by eating superfood(".htmlspecialchars($superFood).").</p>");
+            echo("<p>Will ".htmlspecialchars($name)." be able to save the world and reach his goal before ".htmlspecialchars($villain)." reaches his goal?</p>");
             echo("<p>We will probably not figure out, so don't expect too much of this story</p><br>");
             echo("<h1> the end </h1>")
             ?>
