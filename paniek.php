@@ -17,9 +17,14 @@
         </div>
     </div>
     <?php
-    if ($_POST == "" || $_POST == null){
+    if ($_POST == "" || $_POST == null || count(array_filter($_POST))!=count($_POST)){
         ?>
         <div id="questions">
+        <?php
+        if(count(array_filter($_POST))!=count($_POST)){
+            echo "<p class='Error'>You shouldn't have tried that, now I have to clear the form.</p>";
+        }
+        ?>
         <h1>The super cool school thingy</h1>
         <form method="post">
         <div>

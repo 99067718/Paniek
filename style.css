@@ -20,3 +20,9 @@ body{
 #menu img{
     width: 100px;
 }
+.Error{
+    color: red;
+}
+.Error::before{
+    content: "* ";
+}
